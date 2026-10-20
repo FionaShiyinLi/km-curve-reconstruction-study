@@ -82,6 +82,21 @@ This optional command needs the original Node/Tesseract OCR software and languag
 
 Add `--dataset PP32_S1_D01` to check one dataset. That dataset's original digitization was reproduced during validation; a fresh run of all 64 digitizations has not been validated. The standard analysis uses the saved digitization and reconstruction files.
 
+## Additional post hoc analyses
+
+Run these separately from `make reproduce`, using the same environment:
+
+```sh
+python scripts/analyze_followup_windows.py
+Rscript --vanilla scripts/validate_guyot_implementation.R
+```
+
+The first command calculates S12 event counts and early/late curve errors from the saved records. Late errors use common observed support across all conditions; zero-time events are counted separately. Results and the original bootstrap settings are written to `build/followup_windows/`.
+
+The second compares the Guyot implementation with the published numerical code already in the archive, using identical prepared inputs for 256 arms. It also counts retained month-36 risk anchors. Results go to `build/guyot_validation/`. This checks the numerical calculations; the separate CSV-replay discrepancy described above remains applicable.
+
+Both commands write only to the ignored `build/` directory and make no model calls.
+
 ## Notes for contributors
 
 Keep manuscript text, bibliography files, and unpublished document exports outside version control. Numerical results, table fragments, and underlying research data are included in this repository and become visible if it is made public. Publishing or changing visibility requires the author's approval.
