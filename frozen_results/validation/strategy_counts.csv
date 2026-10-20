@@ -1,0 +1,8 @@
+cohort,input_format,registrations,complete_outputs,path_parsing,pixel_segmentation,hybrid,other_unclear,unevaluable,complete_primary,complete_repeat,recovery_registrations
+original,PDF,40,40,40,0,0,0,0,32,8,0
+original,PNG300,41,40,0,40,0,0,1,32,8,1
+image_only,RASTER_PDF,32,32,0,32,0,0,0,32,0,0
+survminer,PDF,16,16,16,0,0,0,0,16,0,0
+survminer,PNG300,17,16,0,16,0,0,1,16,0,1
+replication,PNG300,51,48,0,48,0,0,3,32,16,3
+replication,PDF,49,48,48,0,0,0,1,32,16,1

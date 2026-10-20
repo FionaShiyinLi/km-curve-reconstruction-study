@@ -1,0 +1,103 @@
+{
+ "units": "percentage points of survival probability",
+ "original": {
+  "difference": -0.08906104041656661,
+  "png300": {
+   "n": 32,
+   "mean": 0.08909504084926122,
+   "median": 0.09066806347403494,
+   "q1": 0.06043900124399543,
+   "q3": 0.11184603207814425,
+   "min": 0.035115758470718704,
+   "max": 0.186940062372222
+  }
+ },
+ "second_main": {
+  "difference": -0.11805652274042136,
+  "png300": {
+   "n": 30,
+   "mean": 0.11906261534788512,
+   "median": 0.0995802633677658,
+   "q1": 0.07912290516715277,
+   "q3": 0.16267244499380426,
+   "min": 0.0186361552650059,
+   "max": 0.335762592323041
+  },
+  "missing": [
+   {
+    "dataset": "RP32_S1_D08",
+    "scenario": "S1",
+    "status_PNG300": "started_unscorable",
+    "tipping_point_pdf_taae": 1.0729537994975099e-05
+   },
+   {
+    "dataset": "RP32_S4_D02",
+    "scenario": "S4",
+    "status_PNG300": "started_unscorable",
+    "tipping_point_pdf_taae": 5.2749103917255695e-06
+   }
+  ],
+  "fill_observed_min": {
+   "value": 0.0186361552650059,
+   "difference": -0.1127618431689236
+  },
+  "fill_observed_max": {
+   "value": 0.335762592323041,
+   "difference": -0.1325822454850508
+  },
+  "fill_zero": {
+   "value": 0.0,
+   "difference": -0.11159708346486075
+  }
+ },
+ "second_transport": {
+  "difference": -0.12033053605674944,
+  "png300": {
+   "n": 32,
+   "mean": 0.120354654480531,
+   "median": 0.0995802633677658,
+   "q1": 0.08150379220773205,
+   "q3": 0.16691109511371877,
+   "min": 0.0186361552650059,
+   "max": 0.335762592323041
+  },
+  "recovered": [
+   {
+    "dataset": "RP32_S1_D08",
+    "taae_PNG300": 0.186121821455087
+   },
+   {
+    "dataset": "RP32_S4_D02",
+    "taae_PNG300": 0.0933486614853514
+   }
+  ]
+ },
+ "pooled62": {
+  "png300": {
+   "n": 62,
+   "mean": 0.10359548012278891,
+   "median": 0.09171853376456471,
+   "q1": 0.06309972203567007,
+   "q3": 0.11655357218427825,
+   "min": 0.0186361552650059,
+   "max": 0.335762592323041
+  },
+  "difference": -0.10355878157849399,
+  "fill_observed_min": -0.10091144179274511,
+  "fill_observed_max": -0.11082164295080871,
+  "fill_zero": -0.10032906194071367
+ },
+ "pooled64_transport": {
+  "png300": {
+   "n": 64,
+   "mean": 0.1047248476648961,
+   "median": 0.09298707740626855,
+   "q1": 0.06387431442058014,
+   "q3": 0.11788173160715876,
+   "min": 0.0186361552650059,
+   "max": 0.335762592323041
+  },
+  "difference": -0.10469578823665802
+ },
+ "note": "Pooled values combine equal-weight cohort means; the frozen pooled bootstrap used the same weighting."
+}

@@ -1,0 +1,31 @@
+# Validated target: macOS Apple Silicon (osx-arm64).
+# Exact transitive packages: environment/conda-osx-arm64.lock.
+name: km-reconstruction
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12.14=hd05a0c4_3_cpython
+  - pip=26.2.1=pyh8b19718_0
+  - setuptools=84.0.0=pyh332efcf_0
+  - numpy=2.5.3=py312hff34920_0
+  - scipy=1.18.1=py312h84b0c4e_0
+  - pandas=3.0.6=np2py312hd9090a6_0
+  - matplotlib-base=3.11.2=py312h11997a8_1
+  - reportlab=4.4.9=py312h2bbb03f_0
+  - pillow=12.3.0=py312hf9dc30a_4
+  - pdfplumber=0.11.9=pyhd8ed1ab_1
+  - pypdf=6.10.0=pyhcf101f3_0
+  - pytest=9.1.1=pyhc364b38_2
+  - poppler=26.09.0=hb6e6627_0
+  - r-base=4.5.2=haf89817_4
+  - r-survival=3.8_3=r45h6168396_1
+  - r-jsonlite=2.0.0=r45h6168396_1
+  - r-ggplot2=4.0.3=r45h785f33e_0
+  - r-dplyr=1.2.1=r45h1380947_0
+  - r-gridextra=2.3.1=r45hc72bb7e_0
+  - r-png=0.1_9=r45h2ec861d_0
+  - r-jpeg=0.1_11=r45h5b307b8_1
+  - libtiff=4.7.2=hf67920b_1
+  - pkg-config=0.29.2=he0b766d_1013
+  - c-compiler=2.0.0=h39478f8_0
+  - make=4.4.1=h84a0fba_3

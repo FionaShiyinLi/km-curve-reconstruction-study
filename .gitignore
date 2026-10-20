@@ -1,0 +1,16 @@
+/build/
+__pycache__/
+*.py[cod]
+.DS_Store
+/AGENTS.md
+
+# Unpublished manuscript files are local only, including alternate export paths.
+/manuscript/
+/paper_context/
+/Claude outputs/
+main.tex
+supplement.tex
+references.bib
+KM_reconstruction.pdf
+supplement.pdf
+*.docx

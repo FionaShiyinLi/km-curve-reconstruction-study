@@ -1,0 +1,43 @@
+{
+  "study_id": "pdf_png300_followup_v1",
+  "status": "post_review_addition_frozen_before_follow_up_model_calls",
+  "independent_datasets": 32,
+  "scenarios": {"S1": 8, "S2": 8, "S3": 8, "S4": 8},
+  "new_primary_sessions": 160,
+  "new_repeat_sessions": 0,
+  "conditions": ["NOMARK_PDF", "NOMARK_PNG300", "PNG150", "PNG100", "JPEG100"],
+  "primary_metric": "taae_mean_0_to_24_months",
+  "reference": "original_observed_records_not_generating_survival_curve",
+  "old_primary_scores": "outputs/evaluation/pdf_png300_32_budget_v2/analysis/scores.csv; primary_attempt=true only",
+  "scoring_implementation": "R/pdf_png300_scoring.R pp_session; unchanged definitions; plus manuscript/PDF_VS_PNG300/prepare_se_estimands.py precision outcomes",
+  "primary_contrasts": [
+    {"name": "marks_vector", "difference": "taae_mean_NOMARK_PDF minus taae_mean_PDF (original primary)", "hypothesis": "rises from the output-rounding floor to the order of 0.07 pp; event counts no longer exact"},
+    {"name": "marks_raster", "difference": "taae_mean_NOMARK_PNG300 minus taae_mean_PNG300 (original primary)", "hypothesis": "smaller, same-signed change"},
+    {"name": "resolution_150", "difference": "taae_mean_PNG150 minus taae_mean_PNG300", "hypothesis": "about +0.09 pp (pixel arithmetic)"},
+    {"name": "resolution_100", "difference": "taae_mean_PNG100 minus taae_mean_PNG300", "hypothesis": "about +0.18 pp"},
+    {"name": "compression_100", "difference": "taae_mean_JPEG100 minus taae_mean_PNG100", "hypothesis": "positive; compression adds error beyond resolution"}
+  ],
+  "difference_direction": "positive means the new condition has larger error",
+  "estimate": "mean within each of four scenarios, then equal mean of those four means among complete pairs",
+  "bootstrap": {
+    "unit": "whole_dataset_with_all_conditions_and_original_results_retained_together",
+    "sampling": "eight of the assigned eight dataset indices with replacement within each scenario",
+    "draws": 10000,
+    "seed": 2026100406,
+    "rng": "numpy PCG64 (Python implementation) or R Mersenne-Twister if the frozen R scorer wrapper is extended; the choice is recorded with the results",
+    "shared_indices_across": "all contrasts, metrics and descriptive scopes",
+    "interval": "95% percentile; type 1",
+    "undefined_draws": "report count and leave interval unavailable",
+    "degenerate_draws": "flag degenerate interval rather than claim precision"
+  },
+  "secondary_metrics": ["taae_A", "taae_B", "maximum_A", "maximum_B", "duration_above_002_A", "duration_above_002_B", "absolute_rmst_error_A", "absolute_rmst_error_B", "absolute_rmst_difference_error", "absolute_log_hr_error", "abs_rel_se_log_hr_error", "signed_events_total_error_A", "signed_events_total_error_B"],
+  "smallest_difference_of_practical_interest": {"taae_pp": 0.5, "rel_se_log_hr": 0.02},
+  "descriptive_scopes": ["all", "n100", "n1000", "noncrossing", "crossing", "S1", "S2", "S3", "S4"],
+  "missingness": "all 160 assignments in completion denominator; missing TAAE is NA; conditional complete-pair estimate plus observed-range fills and [0,1] bounds; pre-startup and transport recoveries handled as in the second cohort",
+  "deviations": "retain scorable outputs; report revision-limit exceedances, failed checks, late assumptions and replay status by condition",
+  "extraction_audit": "classify saved programs by coordinate source for every complete run, by condition",
+  "equivalence": "not tested",
+  "comparison_scope": "post-review follow-up with historical original primary results; batch and time effects remain possible",
+  "execution_authorized": false,
+  "model_calls_authorized": 0
+}

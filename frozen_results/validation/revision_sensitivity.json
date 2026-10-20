@@ -1,0 +1,63 @@
+{
+ "seed": 2026100403,
+ "B": 10000,
+ "exceeded_sessions_matched": [
+  "PP32B_R009",
+  "PP32B_R013",
+  "PP32B_R025",
+  "PP32B_R026",
+  "PP32B_R047",
+  "PP32B_R062",
+  "RP32_R010",
+  "RP32_R023",
+  "RP32_R031",
+  "RP32_R033",
+  "RP32_R052",
+  "RP32_R061"
+ ],
+ "n_pairs": 62,
+ "png300_taae_pp": {
+  "exceeded": {
+   "n": 12,
+   "mean": 0.1454254294189796,
+   "median": 0.142157160482988,
+   "min": 0.035115758470718704,
+   "max": 0.290590762741219
+  },
+  "not_exceeded": {
+   "n": 50,
+   "mean": 0.09355629229170315,
+   "median": 0.0887093256559791,
+   "min": 0.0186361552650059,
+   "max": 0.335762592323041
+  }
+ },
+ "contrast_all": {
+  "estimate": -0.10355878157849399,
+  "lower": -0.1167730137742932,
+  "upper": -0.09105687601574858,
+  "pairs": 62,
+  "strata": 8,
+  "min_per_stratum": 7,
+  "status": "available"
+ },
+ "contrast_excluding_exceeded": {
+  "estimate": -0.09432333871895046,
+  "lower": -0.10676677334403868,
+  "upper": -0.08330693737028447,
+  "pairs": 50,
+  "strata": 8,
+  "min_per_stratum": 5,
+  "status": "available"
+ },
+ "contrast_within_exceeded": {
+  "estimate": -0.14269578002048125,
+  "lower": -0.14710169347272287,
+  "upper": -0.13825240245034748,
+  "pairs": 12,
+  "strata": 8,
+  "min_per_stratum": 1,
+  "status": "available"
+ },
+ "all_pairs_favor_pdf_excluding": true
+}
